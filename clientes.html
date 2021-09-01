@@ -17,6 +17,8 @@
 
     <!--Meus Scripts -->
     <script type="text/javascript" src="/js/buscar_cliente.js"></script>
+    <script type="text/javascript" src="/js/deletar_cliente.js"></script>
+    <script type="text/javascript" src="/js/atualizar_cliente.js"></script>
 </head>
 
 <body>
@@ -34,7 +36,8 @@
                         <tr>
                             <th>Id</th>
                             <th>Nome</th>
-                            <th>Endereco</th>
+                            <th>Sobrenome</th>
+                            <th>Endereço</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -53,19 +56,19 @@
                     </div>
                     <div class="form-group">
                         <label for="cliente_nome">Nome: </label>
-                        <input type="text" class="form-control" id="nome_id" placeholder="Digite seu nome" readonly>
+                        <input type="text" class="form-control" id="cliente_nome" placeholder="Digite seu nome">
                     </div>
                     <div class="form-group">
                         <label for="cliente_sobrenome">Sobrenome: </label>
-                        <input type="text" class="form-control" id="sobrenome_id" placeholder="Digite seu sobrenome" readonly>
+                        <input type="text" class="form-control" id="cliente_sobrenome" placeholder="Digite seu sobrenome">
                     </div>
                     <div class="form-group">
                         <label for="cliente_endereco">Endereço: </label>
-                        <input type="text" class="form-control" id="endereco_id" placeholder="Digite seu endreço" readonly>
+                        <input type="text" class="form-control" id="cliente_endereco" placeholder="Digite seu endreço">
                     </div>
                     <div class="form-group">
                         <label for="cliente_idade">Idade: </label>
-                        <input type="text" class="form-control" id="endereco_idade" placeholder="Digite sua idade" readonly>
+                        <input type="text" class="form-control" id="cliente_idade" placeholder="Digite sua idade" min="18" max="80">
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>

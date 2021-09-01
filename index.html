@@ -6,10 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciamento de Clientes</title>
+
+    <!-- Biblioteca Bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- Biblioteca JavaScript-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Meus Scripts-->
+    <script type="text/javascript" src="/js/salvar_cliente.js"></script>
 </head>
 
 <body>
@@ -42,7 +49,7 @@
                         <label class="control-label" for="idade">Idade: </label>
                         <input type="text" class="form-control" id="idade" placeholder="Digite uma idade" name="idade" required />
                     </div>
-                    <button type="submit" class="btn btn-danger" id="btn-add-novo-cliente">Atualizar</button>
+                    <button type="submit" class="btn btn-danger" id="btn-add-novo-cliente">Enviar</button>
                 </form>
                 <div id="response" style="display: none; margin-top: 10px;"></div>
             </div>
