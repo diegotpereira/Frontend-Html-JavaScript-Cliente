@@ -1,12 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Clientes</title>
+
+    <!-- Biblioteca Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- Bibioteca JavaScript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!--Meus Scripts -->
+    <script type="text/javascript" src="/js/buscar_cliente.js"></script>
 </head>
+
 <body>
-    
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="/clientes/">Lista de Clientes</a>
+            </li>
+        </ul>
+        <div id="div_cliente_tabela">
+            <h1>Tabela de Clientes</h1>
+            <div class="row col-md-6 table-responsive">
+                <table id="clienteTabela" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>Endereco</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6" style="display: none; background-color: #e6fffa; padding: 10px; border-radius: 3px;" id="div_cliente_atualizar">
+                <form id="atualizar_cliente_form">
+                    <div class="form-group">
+                        <label for="cliente_id">Id: </label>
+                        <input type="text" class="form-control" id="cliente_id" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="cliente_nome">Nome: </label>
+                        <input type="text" class="form-control" id="nome_id" placeholder="Digite seu nome" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="cliente_sobrenome">Sobrenome: </label>
+                        <input type="text" class="form-control" id="sobrenome_id" placeholder="Digite seu sobrenome" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="cliente_endereco">Endereço: </label>
+                        <input type="text" class="form-control" id="endereco_id" placeholder="Digite seu endreço" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="cliente_idade">Idade: </label>
+                        <input type="text" class="form-control" id="endereco_idade" placeholder="Digite sua idade" readonly>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+                <div id="response" style="display: none; margin: 10px;">
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Modal -->
+        <div class="modal fade" id="delete-modal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Deletar!</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+
+                    </div>
+
+                    <!-- Modal Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger" id="modal-delete-btn">Deletar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
